@@ -14,5 +14,7 @@ database:
     - bundle exec rake db:create db:schema:load RAILS_ENV=test
     - bundle exec rake db:migrate RAILS_ENV=test
 test:
+  pre:
+    - bundle exec rubocop -c .rubocop.yml
   override:
     - bundle exec rspec spec/
