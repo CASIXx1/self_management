@@ -2,7 +2,7 @@ FROM ruby:2.4.1
 
 # set environment variables
 ENV LANG C.UTF-8
-ENV ROOT_PATH /self_management
+ENV ROOT_PATH /myapp
 
 # install essential libraries
 RUN apt-get update -qq && apt-get install -y build-essential libpq-dev
