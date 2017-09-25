@@ -8,7 +8,7 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem "rails", "~> 5.1.4"
 # Use webpacker
-gem 'webpacker', '~> 3.0'
+gem "webpacker", "~> 3.0"
 # gem 'webpacker', github: "rails/webpacker"
 # devise
 gem "devise"
