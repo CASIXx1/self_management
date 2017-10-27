@@ -8,7 +8,7 @@ RSpec.describe "dairies/index", type: :view do
     ])
   end
 
-  it "renders a list of dairies" do
-    render
-  end
+  # it "renders a list of dairies" do
+  #   render
+  # end
 end

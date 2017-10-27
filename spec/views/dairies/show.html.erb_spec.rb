@@ -5,7 +5,7 @@ RSpec.describe "dairies/show", type: :view do
     @dairy = assign(:dairy, Dairy.create!())
   end
 
-  it "renders attributes in <p>" do
-    render
-  end
+  # it "renders attributes in <p>" do
+  #   render
+  # end
 end
