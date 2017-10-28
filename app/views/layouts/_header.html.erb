@@ -1,16 +1,14 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a href="#" class="navbar-brand">Self Management</a>
+      <a href="/" class="navbar-brand">Self Management</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active">
-        <a href="#"><span class="glyphicon glyphicon-home"></span> Home</a>
+        <a href="/"><span class="glyphicon glyphicon-home"></span> Home</a>
       </li>
-      <li><a href="#"><span class="glyphicon glyphicon-cutlery"></span> Food</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-glass"></span> Drink</a></li>
-      <li><a href="#">アクセス</a></li>
-      <li><a href="#">予約</a></li>
+      <li><%= link_to 'Sign_in', new_user_session_path %></li>
+      <li><%= link_to 'Dairies', dairies_path %></li>
     </ul>
   </div>
 </nav>
