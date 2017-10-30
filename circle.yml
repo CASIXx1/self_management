@@ -11,7 +11,6 @@ dependencies:
 database:
   pre:
     - cp config/database.yml config/database.yml.org
-    - mv config/database.yml.ci config/database.yml
   override:
     - bundle exec rake db:create db:schema:load RAILS_ENV=test
     - bundle exec rake db:migrate RAILS_ENV=test
