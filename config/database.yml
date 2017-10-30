@@ -24,7 +24,7 @@ test:
   database: myapp_test
   host: db
   username: root
-  password:
+  password: password
 
 production:
   <<: *default
