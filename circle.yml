@@ -3,13 +3,15 @@ machine:
     Asia/Tokyo
   ruby:
     version:
-      2.3.4
+      2.4.1
 dependencies:
   override:
     - bundle install:
         timeout: 1180
 database:
   pre:
+    - cp config/database.yml config/database.yml.org
+    - mv config/database.yml.ci config/database.yml
   override:
     - bundle exec rake db:create db:schema:load RAILS_ENV=test
     - bundle exec rake db:migrate RAILS_ENV=test
