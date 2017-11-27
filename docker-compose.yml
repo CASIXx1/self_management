@@ -1,19 +1,9 @@
-version: '3'
+version: '2'
 services:
-  db_data:
-    image: busybox
-    volumes:
-      - /var/lib/mysql
-      - /share
   db:
     image: mysql:latest
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
-    volumes_from:
-      - db_data
-    ports:
-      - "3306:3306"
-    mem_limit: 500m
   web:
     build: .
     command: bundle exec rails s -p 3000 -b '0.0.0.0'
