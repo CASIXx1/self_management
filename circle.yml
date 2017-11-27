@@ -19,10 +19,10 @@ jobs:
           command: docker-compose run web rails db:create db:migrate
       - run:
           name: rubocop test
-          command: - bundle exec rubocop -c .rubocop.yml
+          command: bundle exec rubocop -c .rubocop.yml
       - run:
           name: rspec test
-          command: - bundle exec rspec spec
+          command: bundle exec rspec spec
       - run:
           name: docker-compose down
           command: docker-compose down
