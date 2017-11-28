@@ -13,7 +13,7 @@ jobs:
           command: docker-compose up -d
       - run:
           name: sleep for waiting launch db
-          command: sleep 30
+          command: sleep 20
       - run:
           name: "before_test:"
           command: docker ps
@@ -22,10 +22,10 @@ jobs:
           command: docker-compose run web rails db:create db:migrate RAILS_ENV=test
       - run:
           name: rubocop test
-          command: bundle exec rubocop -c .rubocop.yml
+          command: docker-compose run web rails rubocop -c .rubocop.yml
       - run:
           name: rspec test
-          command: bundle exec rspec spec
+          command: docker-compose run web rails rspec spec
       - run:
           name: docker-compose down
           command: docker-compose down
