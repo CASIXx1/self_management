@@ -12,9 +12,6 @@ jobs:
           name: docker-compose up
           command: docker-compose up -d
       - run:
-          name: sleep for waiting launch db
-          command: sleep 15
-      - run:
           name: "check_contena:"
           command: docker ps
       - run:
