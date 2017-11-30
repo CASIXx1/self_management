@@ -12,7 +12,7 @@ gem "webpacker"
 # gem 'webpacker', github: "rails/webpacker"
 # devise
 gem "devise"
-# Use sqlite3 as the database for Active Record
+# Use mysql as the database for Active Record
 gem "mysql2"
 # Use Puma as the app server
 gem "puma", "~> 3.0"
