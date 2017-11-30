@@ -12,7 +12,10 @@ jobs:
           name: docker-compose up
           command: docker-compose up -d
       - run:
-          name: "check_contena:"
+          name: sleep for waiting launch db
+          command: sleep 10
+      - run:
+          name: "check_contena"
           command: docker ps
       - run:
           name: "before_test: setup db"
