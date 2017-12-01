@@ -1,7 +1,6 @@
-class Custom < ApplicationRecord
+class Rule < ApplicationRecord
   # -------------------------------------------------------------------------------
   # Relations
   # -------------------------------------------------------------------------------
-  belongs_to :user
-  has_many :rules
+  belongs_to :custom
 end
