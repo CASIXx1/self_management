@@ -14,7 +14,7 @@ gem "devise"
 # Use mysql as the database for Active Record
 gem "mysql2", group: [:development, :test]
 # Use postgresql as the production database
-gem 'pg', group: :production
+gem "pg", group: :production
 # Use Puma as the app server
 gem "puma", "~> 3.0"
 # Use SCSS for stylesheets
