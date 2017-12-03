@@ -24,6 +24,7 @@ jobs:
   test:
     machine:
       image: circleci/classic:edge
+      parallelism: 3
     steps:
       - checkout
       - run: pip install docker-compose
@@ -43,7 +44,7 @@ jobs:
           command: docker-compose up -d
       - run:
           name: sleep for waiting launch db
-          command: sleep 3
+          command: sleep 5
       - run:
           name: "check_contena"
           command: docker ps
