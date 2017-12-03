@@ -9,11 +9,12 @@ end
 gem "rails", "~> 5.1.4"
 # Use webpacker
 gem "webpacker"
-# gem 'webpacker', github: "rails/webpacker"
 # devise
 gem "devise"
 # Use mysql as the database for Active Record
-gem "mysql2"
+gem "mysql2", group: [:development, :test]
+# Use postgresql as the production database
+gem 'pg', group: :production
 # Use Puma as the app server
 gem "puma", "~> 3.0"
 # Use SCSS for stylesheets

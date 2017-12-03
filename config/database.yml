@@ -27,5 +27,4 @@ test:
   password:
 
 production:
-  <<: *default
-  database: myapp_production
+  url: <%= ENV['DATABASE_URL'] %>
