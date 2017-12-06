@@ -28,7 +28,7 @@ jobs:
           command: docker-compose run web rspec spec
       - run:
           name: "make erd"
-          command: docker-compose run web bundle exec rake erd attributes=foreign_keys,primary_keys,content
+          command: docker-compose run web rails rake erd attributes=foreign_keys,primary_keys,content RAILS_ENV=test
       - store_artifacts:
           path: erd.pdf
       - run:
