@@ -1,7 +1,6 @@
-class Dairy < ApplicationRecord
+class Rule < ApplicationRecord
   # -------------------------------------------------------------------------------
   # Relations
   # -------------------------------------------------------------------------------
-  belongs_to :user
-  has_many :customs, through: :checks
+  belongs_to :custom
 end

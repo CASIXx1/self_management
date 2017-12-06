@@ -1,7 +1,7 @@
-class Dairy < ApplicationRecord
+class Check < ApplicationRecord
   # -------------------------------------------------------------------------------
   # Relations
   # -------------------------------------------------------------------------------
-  belongs_to :user
-  has_many :customs, through: :checks
+  belongs_to :dairy
+  belongs_to :custom
 end
