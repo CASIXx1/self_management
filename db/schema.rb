@@ -13,8 +13,8 @@
 ActiveRecord::Schema.define(version: 20171206083226) do
 
   create_table "checks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "dairy"
-    t.integer "custom"
+    t.integer "dairy_id", null: false
+    t.integer "custom_id", null: false
     t.boolean "check"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
