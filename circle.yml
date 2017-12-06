@@ -27,5 +27,14 @@ jobs:
           name: "rspec test"
           command: docker-compose run web rspec spec
       - run:
+          name: "make erd"
+          command: |
+            mkdir -p tmp/erd
+            bundle exec rake erd attributes=foreign_keys,primary_keys,content
+            mv erd.pdf tmp/erd/erd.pdf
+          when: on_fail
+      - store_artifacts:
+          path: /tmp/erd
+      - run:
           name: docker-compose down
           command: docker-compose down
