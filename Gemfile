@@ -9,6 +9,8 @@ end
 gem "rails", "~> 5.1.4"
 # Use webpacker
 gem "webpacker"
+# Use foreman
+gem "foreman"
 # devise
 gem "devise"
 # Use mysql as the database for Active Record
