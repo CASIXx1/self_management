@@ -5,7 +5,7 @@ ENV LANG C.UTF-8
 ENV ROOT_PATH /myapp
 
 # install essential libraries
-RUN apt-get update -qq && apt-get install -y build-essential libpq-dev
+RUN apt-get update -qq && apt-get install -y build-essential libpq-dev graphviz
 
 # install node.js
 RUN curl -sL https://deb.nodesource.com/setup_7.x | bash - && \

@@ -13,7 +13,7 @@ jobs:
           command: docker-compose up -d
       - run:
           name: sleep for waiting launch db
-          command: sleep 10
+          command: sleep 8
       - run:
           name: "check_contena"
           command: docker ps
@@ -28,13 +28,9 @@ jobs:
           command: docker-compose run web rspec spec
       - run:
           name: "make erd"
-          command: |
-            mkdir -p /tmp/erd
-            bundle exec rake erd attributes=foreign_keys,primary_keys,content
-            mv erd.pdf /tmp/erd/erd.pdf
-          when: on_fail
+          command: bundle exec rake erd attributes=foreign_keys,primary_keys,content
       - store_artifacts:
-          path: /tmp/erd/erd.pdf
+          path: erd.pdf
       - run:
           name: docker-compose down
           command: docker-compose down
