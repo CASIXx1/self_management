@@ -11,5 +11,7 @@ services:
     command: bundle exec foreman start
     volumes:
       - .:/myapp
+    ports:
+      - "3000:3000"
     depends_on:
       - db

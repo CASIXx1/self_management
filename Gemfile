@@ -9,8 +9,6 @@ end
 gem "rails", "~> 5.1.4"
 # Use webpacker
 gem "webpacker"
-# Use foreman
-gem "foreman"
 # devise
 gem "devise"
 # Use mysql as the database for Active Record
@@ -56,6 +54,8 @@ group :development, :test do
 end
 
 group :development do
+  # Use foreman
+  gem "foreman"
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem "web-console", ">= 3.3.0"
   gem "listen", "~> 3.0.5"
