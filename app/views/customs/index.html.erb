@@ -12,6 +12,10 @@
   <tbody>
     <% @customs.each do |custom| %>
       <tr>
+        <td><%= custom.title %></td>
+        <td><%= custom.description %></td>
+      </tr>
+      <tr>
         <td><%= link_to 'Show', custom %></td>
         <td><%= link_to 'Edit', edit_custom_path(custom) %></td>
         <td><%= link_to 'Destroy', custom, method: :delete, data: { confirm: 'Are you sure?' } %></td>
