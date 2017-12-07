@@ -41,44 +41,44 @@ RSpec.describe CustomsController, type: :controller do
   # CustomsController. Be sure to keep this updated too.
   let(:valid_session) { {} }
 
-  describe "GET #index" do
-    it "returns a success response" do
-      custom = Custom.create! valid_attributes
-      get :index, params: {}, session: valid_session
-      expect(response).to be_success
-    end
-  end
-
-  describe "GET #show" do
-    it "returns a success response" do
-      custom = Custom.create! valid_attributes
-      get :show, params: { id: custom.to_param }, session: valid_session
-      expect(response).to be_success
-    end
-  end
-
-  describe "GET #new" do
-    it "returns a success response" do
-      get :new, params: {}, session: valid_session
-      expect(response).to be_success
-    end
-  end
-
-  describe "GET #edit" do
-    it "returns a success response" do
-      custom = Custom.create! valid_attributes
-      get :edit, params: { id: custom.to_param }, session: valid_session
-      expect(response).to be_success
-    end
-  end
-
-  describe "POST #create" do
-    context "with valid params" do
-      it "creates a new Custom" do
-        expect {
-          post :create, params: { custom: valid_attributes }, session: valid_session
-        }.to change(Custom, :count).by(1)
-      end
+  # describe "GET #index" do
+  #   it "returns a success response" do
+  #     custom = Custom.create! valid_attributes
+  #     get :index, params: {}, session: valid_session
+  #     expect(response).to be_success
+  #   end
+  # end
+  #
+  # describe "GET #show" do
+  #   it "returns a success response" do
+  #     custom = Custom.create! valid_attributes
+  #     get :show, params: { id: custom.to_param }, session: valid_session
+  #     expect(response).to be_success
+  #   end
+  # end
+  #
+  # describe "GET #new" do
+  #   it "returns a success response" do
+  #     get :new, params: {}, session: valid_session
+  #     expect(response).to be_success
+  #   end
+  # end
+  #
+  # describe "GET #edit" do
+  #   it "returns a success response" do
+  #     custom = Custom.create! valid_attributes
+  #     get :edit, params: { id: custom.to_param }, session: valid_session
+  #     expect(response).to be_success
+  #   end
+  # end
+  #
+  # describe "POST #create" do
+  #   context "with valid params" do
+  #     it "creates a new Custom" do
+  #       expect {
+  #         post :create, params: { custom: valid_attributes }, session: valid_session
+  #       }.to change(Custom, :count).by(1)
+  #     end
 
       it "redirects to the created custom" do
         post :create, params: { custom: valid_attributes }, session: valid_session
