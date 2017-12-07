@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :custom do
-    title "MyString"
-    description "MyText"
+    title 'MyString'
+    description 'MyText'
 
     factory :valid_custom do
       after(:build) do |custom|

@@ -1,1 +1,1 @@
-json.array! @customs, partial: "customs/custom", as: :custom
+json.array! @customs, partial: 'customs/custom', as: :custom

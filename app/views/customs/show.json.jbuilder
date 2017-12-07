@@ -1,1 +1,1 @@
-json.partial! "customs/custom", custom: @custom
+json.partial! 'customs/custom', custom: @custom

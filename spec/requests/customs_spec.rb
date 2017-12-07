@@ -1,6 +1,6 @@
-require "rails_helper"
+require 'rails_helper'
 
-RSpec.describe "Customs", type: :request do
+RSpec.describe 'Customs', type: :request do
   # describe "GET /customs" do
   #   it "works! (now write some real specs)" do
   #     get customs_path

@@ -1,6 +1,6 @@
-require "rails_helper"
+require 'rails_helper'
 
-RSpec.describe "dairies/edit", type: :view do
+RSpec.describe 'dairies/edit', type: :view do
   before(:each) do
     @dairy = assign(:dairy, Dairy.create!())
   end
