@@ -19,6 +19,10 @@ Style/AndOr:
 Style/BracesAroundHashParameters:
   Enabled: true
 
+# 意味なくダブルクォートを使ってないかチェック
+StringLiterals:
+  EnforcedStyle: single_quotes
+
 # Align `when` with `case`.
 Layout/CaseIndentation:
   Enabled: true
