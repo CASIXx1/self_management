@@ -1,6 +1,6 @@
-require "rails_helper"
+require 'rails_helper'
 
-RSpec.describe "customs/new", type: :view do
+RSpec.describe 'customs/new', type: :view do
   # before(:each) do
   #   assign(:custom, Custom.new())
   # end

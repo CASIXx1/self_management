@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :rule do
-    title "MyString"
-    description "MyString"
+    title 'MyString'
+    description 'MyString'
 
     factory :valid_rule do
       after(:build) do |rule|

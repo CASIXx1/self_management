@@ -29,7 +29,7 @@ class DairiesController < ApplicationController
 
     respond_to do |format|
       if @dairy.save
-        format.html { redirect_to @dairy, notice: "Dairy was successfully created." }
+        format.html { redirect_to @dairy, notice: 'Dairy was successfully created.' }
         format.json { render :show, status: :created, location: @dairy }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class DairiesController < ApplicationController
   def update
     respond_to do |format|
       if @dairy.update(dairy_params)
-        format.html { redirect_to @dairy, notice: "Dairy was successfully updated." }
+        format.html { redirect_to @dairy, notice: 'Dairy was successfully updated.' }
         format.json { render :show, status: :ok, location: @dairy }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class DairiesController < ApplicationController
   def destroy
     @dairy.destroy
     respond_to do |format|
-      format.html { redirect_to dairies_url, notice: "Dairy was successfully destroyed." }
+      format.html { redirect_to dairies_url, notice: 'Dairy was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

@@ -1,6 +1,6 @@
-require "rails_helper"
+require 'rails_helper'
 
-RSpec.describe "customs/edit", type: :view do
+RSpec.describe 'customs/edit', type: :view do
   # before(:each) do
   #   @custom = assign(:custom, Custom.create!())
   # end
