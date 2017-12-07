@@ -72,26 +72,26 @@ RSpec.describe CustomsController, type: :controller do
   #   end
   # end
   #
-  # describe "POST #create" do
-  #   context "with valid params" do
-  #     it "creates a new Custom" do
-  #       expect {
-  #         post :create, params: { custom: valid_attributes }, session: valid_session
-  #       }.to change(Custom, :count).by(1)
-  #     end
-
-      it "redirects to the created custom" do
-        post :create, params: { custom: valid_attributes }, session: valid_session
-        expect(response).to redirect_to(Custom.last)
-      end
-    end
-
-    context "with invalid params" do
-      it "returns a success response (i.e. to display the 'new' template)" do
-        post :create, params: { custom: invalid_attributes }, session: valid_session
-        expect(response).to be_success
-      end
-    end
+  describe "POST #create" do
+    # context "with valid params" do
+    #   it "creates a new Custom" do
+    #     expect {
+    #       post :create, params: { custom: valid_attributes }, session: valid_session
+    #     }.to change(Custom, :count).by(1)
+    #   end
+    #
+    #   it "redirects to the created custom" do
+    #     post :create, params: { custom: valid_attributes }, session: valid_session
+    #     expect(response).to redirect_to(Custom.last)
+    #   end
+    # end
+    #
+    # context "with invalid params" do
+    #   it "returns a success response (i.e. to display the 'new' template)" do
+    #     post :create, params: { custom: invalid_attributes }, session: valid_session
+    #     expect(response).to be_success
+    #   end
+    # end
   end
 
   describe "PUT #update" do
