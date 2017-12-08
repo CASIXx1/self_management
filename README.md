@@ -1,5 +1,3 @@
-# self_management
-
 # 概要
 自己管理用のアプリ
 
