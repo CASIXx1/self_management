@@ -43,12 +43,6 @@ ActiveRecord::Schema.define(version: 20171210074011) do
     t.integer "custom_id"
   end
 
-  create_table "tests", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "aaa"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "users", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
