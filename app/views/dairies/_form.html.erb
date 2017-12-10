@@ -11,6 +11,11 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= form.label :date, '日付' %>
+    <%= form.text_field :date, class: 'datetimepicker', value: Date.today %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

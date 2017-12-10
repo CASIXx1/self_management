@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20171210074011) do
   create_table "dairies", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.datetime "date", null: false
+    t.date "date", null: false
     t.integer "user_id"
   end
 

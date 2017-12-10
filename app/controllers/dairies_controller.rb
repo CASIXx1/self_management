@@ -70,6 +70,6 @@ class DairiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def dairy_params
-      params.fetch(:dairy, {})
+      params.fetch(:dairy, {}).permit(:date)
     end
 end
