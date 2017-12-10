@@ -4,4 +4,9 @@ class Dairy < ApplicationRecord
   # -------------------------------------------------------------------------------
   belongs_to :user
   has_many :customs, through: :checks
+
+  # -------------------------------------------------------------------------------
+  # Validations
+  # -------------------------------------------------------------------------------
+  validates :date, uniqueness: true, presence: true
 end
