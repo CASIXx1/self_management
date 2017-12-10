@@ -6,5 +6,15 @@
 //
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
+//= require bootstrap-datepicker
 
-console.log('Hello World from Webpacker')
+// カレンダー（時間なし）
+$(document).on('click', '.datepicker', function(){
+  $(this).datepicker({
+    format: 'yyyy/mm',
+    language: 'ja',
+    autoclose: true,
+    minViewMode: 'months'
+  });
+  $(this).datepicker("show");
+});

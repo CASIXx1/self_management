@@ -14,4 +14,16 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require bootstrap-datepicker
 //= require_tree .
+
+// カレンダー（時間なし）
+$(document).on('click', '.datepicker', function(){
+  $(this).datepicker({
+    format: 'yyyy/mm/dd',
+    language: 'ja',
+    autoclose: true,
+    minViewMode: 'days'
+  });
+  $(this).datepicker("show");
+});
