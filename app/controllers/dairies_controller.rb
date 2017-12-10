@@ -1,6 +1,7 @@
 class DairiesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_dairy, only: [:show, :edit, :update, :destroy]
+  before_action :set_checks, only: [:update]
 
   # GET /dairies
   # GET /dairies.json
@@ -20,6 +21,7 @@ class DairiesController < ApplicationController
 
   # GET /dairies/1/edit
   def edit
+    @checks = Check.where(dairy: @dairy)
   end
 
   # POST /dairies
@@ -29,7 +31,10 @@ class DairiesController < ApplicationController
 
     respond_to do |format|
       if @dairy.save
-        format.html { redirect_to @dairy, notice: 'Dairy was successfully created.' }
+        Custom.all.each do |custom|
+          Check.create(dairy: @dairy, custom: custom)
+        end
+        format.html { redirect_to dairies_path, notice: 'Dairy was successfully created.' }
         format.json { render :show, status: :created, location: @dairy }
       else
         format.html { render :new }
@@ -43,7 +48,8 @@ class DairiesController < ApplicationController
   def update
     respond_to do |format|
       if @dairy.update(dairy_params)
-        format.html { redirect_to @dairy, notice: 'Dairy was successfully updated.' }
+        @checks.update(check_params)
+        format.html { redirect_to dairies_path, notice: 'Dairy was successfully updated.' }
         format.json { render :show, status: :ok, location: @dairy }
       else
         format.html { render :edit }
@@ -68,8 +74,16 @@ class DairiesController < ApplicationController
       @dairy = Dairy.find(params[:id])
     end
 
+    def set_checks
+      @checks = Check.where(dairy: params[:id])
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def dairy_params
       params.fetch(:dairy, {}).permit(:date)
+    end
+
+    def check_params
+      params.fetch(:check, {}).permit(:continue)
     end
 end
