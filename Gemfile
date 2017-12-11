@@ -50,6 +50,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
+  gem 'faker'
   gem 'rails-erd'
   gem 'rspec-rails'
   gem 'rubocop'
