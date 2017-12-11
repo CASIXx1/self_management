@@ -16,13 +16,14 @@
       <%= form.label :date, '日付' %>
       <%= form.text_field :date, class: 'datepicker', value: Date.today %>
     </div>
-  <% elsif action_name == 'edit' %>
-    <% @checks.each do |check| %>
-      <div class="field">
-        <%= form.check_box :continue %>
-      </div>
-    <% end %>
   <% end %>
+
+  <div class="field">
+    <%= form.label :customs %><br />
+    <%= collection_check_boxes(:dairy, :custom_ids, Custom.all, :id, :title) do |b| %>
+      <%= b.label { b.check_box + b.text } %>
+    <% end %>
+  </div>
 
   <div class="actions">
     <%= form.submit %>
