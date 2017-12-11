@@ -11,6 +11,20 @@
     </div>
   <% end %>
 
+  <% if action_name == 'new' %>
+    <div class="field">
+      <%= form.label :date, '日付' %>
+      <%= form.text_field :date, class: 'datepicker', value: Date.today %>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :customs %><br />
+    <%= collection_check_boxes(:dairy, :custom_ids, Custom.all, :id, :title) do |b| %>
+      <%= b.label { b.check_box + b.text } %>
+    <% end %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

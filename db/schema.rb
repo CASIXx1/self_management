@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171207085733) do
+ActiveRecord::Schema.define(version: 20171210134847) do
 
   create_table "checks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "dairy_id", null: false
     t.integer "custom_id", null: false
-    t.boolean "check"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "continue"
   end
 
   create_table "customs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20171207085733) do
   create_table "dairies", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.datetime "date"
+    t.date "date", null: false
     t.integer "user_id"
   end
 

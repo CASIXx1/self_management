@@ -29,7 +29,7 @@ class DairiesController < ApplicationController
 
     respond_to do |format|
       if @dairy.save
-        format.html { redirect_to @dairy, notice: 'Dairy was successfully created.' }
+        format.html { redirect_to dairies_path, notice: 'Dairy was successfully created.' }
         format.json { render :show, status: :created, location: @dairy }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class DairiesController < ApplicationController
   def update
     respond_to do |format|
       if @dairy.update(dairy_params)
-        format.html { redirect_to @dairy, notice: 'Dairy was successfully updated.' }
+        format.html { redirect_to dairies_path, notice: 'Dairy was successfully updated.' }
         format.json { render :show, status: :ok, location: @dairy }
       else
         format.html { render :edit }
@@ -70,6 +70,6 @@ class DairiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def dairy_params
-      params.fetch(:dairy, {})
+      params.fetch(:dairy, {}).permit(:date, custom_ids: [])
     end
 end

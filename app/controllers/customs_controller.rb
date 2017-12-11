@@ -10,6 +10,7 @@ class CustomsController < ApplicationController
   # GET /customs/1
   # GET /customs/1.json
   def show
+    @dairies = @custom.dairies
   end
 
   # GET /customs/new

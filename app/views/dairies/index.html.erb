@@ -12,6 +12,9 @@
   <tbody>
     <% @dairies.each do |dairy| %>
       <tr>
+        <td><%= dairy.date %></td>
+      </tr>
+      <tr>
         <td><%= link_to 'Show', dairy %></td>
         <td><%= link_to 'Edit', edit_dairy_path(dairy) %></td>
         <td><%= link_to 'Destroy', dairy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
