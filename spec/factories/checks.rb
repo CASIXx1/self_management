@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :check do
-    continue false
+    continue { Faker::Boolean.boolean(0.2) }
 
     factory :valid_check do
       after(:build) do |check|

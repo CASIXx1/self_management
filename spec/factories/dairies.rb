@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :dairy do
-    date '20171212'
+    date { Faker::Date.between(2.days.ago, 2.days.from_now) }
 
     factory :valid_dairy do
       after(:build) do |dairy|
