@@ -1,4 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<% @dairies.each do |dairy| %>
+  <li>
+    <%= dairy.date %>
+  </li>
+<% end %>
 <%= link_to 'Edit', edit_custom_path(@custom) %> |
 <%= link_to 'Back', customs_path %>
